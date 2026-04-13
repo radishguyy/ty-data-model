@@ -136,14 +136,14 @@ print(f"Akurasi Naive Bayes   : {akurasi_nb * 100:.2f}%")
 print(f"Akurasi Decision Tree : {accuracy_score(y_test, y_pred_dt) * 100:.2f}%")
 print(f"Akurasi SVM           : {akurasi_svm * 100:.2f}%")
 
-\"\"\"
-REFLEKSI PRAKTIKUM
-1. Apa kesulitan selama praktikum?
-   - (Silakan diisi sesuai pengalaman pribadi)
+# \"\"\"
+# REFLEKSI PRAKTIKUM
+# 1. Apa kesulitan selama praktikum?
+#    - (Silakan diisi sesuai pengalaman pribadi)
 
-2. Apa insight yang diperoleh?
-   - (Silakan diisi mengenai hal baru yang dipelajari)
+# 2. Apa insight yang diperoleh?
+#    - (Silakan diisi mengenai hal baru yang dipelajari)
 
-3. Bagaimana cara meningkatkan performa model?
-   - (Silakan diisi, contoh: mencari parameter terbaik/hyperparameter tuning, scaling data, dsb.)
-\"\"\"
+# 3. Bagaimana cara meningkatkan performa model?
+#    - (Silakan diisi, contoh: mencari parameter terbaik/hyperparameter tuning, scaling data, dsb.)
+# \"\"\"
