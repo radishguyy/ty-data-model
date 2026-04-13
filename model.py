@@ -67,3 +67,54 @@ sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
 plt.xlabel('Predicted Label')
 plt.ylabel('True Label')
 plt.show()
+
+# Langkah 19: Scatter plot sepal length vs petal length
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=df, x='sepal.length', y='petal.length')
+plt.title('Scatter Plot: Sepal Length vs Petal Length')
+plt.xlabel('Sepal Length')
+plt.ylabel('Petal Length')
+plt.show()
+
+# Langkah 20: Visualisasi per kelas menggunakan parameter 'hue'
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=df, x='sepal.length', y='petal.length', hue='variety', palette='viridis')
+plt.title('Scatter Plot per Kelas: Sepal Length vs Petal Length')
+plt.xlabel('Sepal Length')
+plt.ylabel('Petal Length')
+plt.legend(title='Variety')
+plt.show()
+
+from sklearn.svm import SVC
+
+# 1. Menambahkan model SVM
+model_svm = SVC(random_state=42)
+model_svm.fit(X_train, y_train)
+
+# 2. Prediksi dan Evaluasi model SVM
+y_pred_svm = model_svm.predict(X_test)
+
+print("\nClassification Report for SVM:")
+print(classification_report(y_test, y_pred_svm, target_names=['Setosa', 'Versicolor', 'Virginica']))
+
+# 3. Bandingkan Akurasi Ketiga Model
+akurasi_nb = accuracy_score(y_test, y_pred_nb)
+akurasi_dt = accuracy_score(y_test, y_pred_dt)
+akurasi_svm = accuracy_score(y_test, y_pred_svm)
+
+print("\n--- Perbandingan Performa Model ---")
+print(f"Akurasi Naive Bayes : {akurasi_nb*100:.2f}%")
+print(f"Akurasi Decision Tree : {akurasi_dt*100:.2f}%")
+print(f"Akurasi SVM           : {akurasi_svm*100:.2f}%")
+
+"""
+REFLEKSI PRAKTIKUM:
+1. Apa kesulitan selama praktikum?
+   Jawaban: (Isi dengan pengalaman Anda)
+
+2. Apa insight yang diperoleh?
+   Jawaban: (Isi dengan pemahaman baru yang Anda dapatkan)
+
+3. Bagaimana cara meningkatkan performa model?
+   Jawaban: (Contoh: Melakukan hyperparameter tuning, menambah jumlah data, atau mencoba teknik preprocessing yang berbeda)
+"""
